@@ -1,0 +1,56 @@
+<h1>Master List</h1> 
+<a href="/new">New File</a>
+
+
+<table border="1" style="width:1000px">
+
+<style>
+th
+{
+text-align:left;
+}
+
+table
+{
+border-spacing:5px;
+}
+
+th,td
+{
+padding:15px;
+}
+
+table,th,td
+{
+border:1px solid black;
+}
+
+
+</style>
+
+<tr>
+  <th>Client</th>
+  <th>Case Name</th> 
+  <th>Loan Number</th>
+  <th>Case Number</th>
+  <th>Referral Date</th>
+  <th>Referral Type</th>
+  <th>Chapter</th>
+
+
+</tr>
+
+<% @cases.each do |file| %>
+<tr>
+	<td><%= file['client'] %></td>
+	<td><%= file['casename'] %></td>
+	<td><%= file['loan_number'] %></td>
+	<td><%= file['case_number'] %></td>
+	<td><%= file['referral_date'] %></td>
+	<td><%= file['referral_type'] %></td>
+	<td><%= file['chapter'] %></td>
+</tr>
+
+<% end %>
+</table>
+

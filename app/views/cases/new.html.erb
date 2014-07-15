@@ -1,0 +1,26 @@
+<h1>Master</h1>
+
+<%= form_for Case.new, url: '/new' do |f| %>
+  <%= f.label :client %>
+  <%= f.text_field :client %>
+  <br/>
+  <%= f.label :casename %>
+  <%= f.text_field :casename %>
+  <br />
+  <%= f.label :loan_number %>
+  <%= f.text_field :loan_number %>
+  <br />
+  <%= f.label :case_number %>
+  <%= f.number_field :case_number %>
+  <br />
+  <%= f.label :referral_date %>
+  <%= f.date_field :referral_date %>
+  <br />
+  <%= f.label :referral_type %>
+  <%= f.text_field :referral_type %>
+  <br />
+   <%= f.label :chapter %>
+  <%= f.text_field :chapter %>
+  <br />
+  <%= f.submit "Save" %>
+<% end %>

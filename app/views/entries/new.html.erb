@@ -1,0 +1,11 @@
+<h1>Master</h1>
+
+<%= form_for Entry.new, url: '/entry' do |e| %>
+  <%= e.label :date %>
+  <%= e.date_field :date %>
+  <br/>
+  <%= e.label :note %>
+  <%= e.text_field :note %>
+  <br />
+  <%= e.submit "Save" %>
+<% end %>
